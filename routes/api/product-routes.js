@@ -16,6 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+
 // get one product
 router.get('/:id', async (req, res) => {
   // be sure to include its associated Category and Tag data
@@ -34,6 +35,7 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 // create new product
 router.post('/', (req, res) => {
@@ -58,6 +60,7 @@ router.post('/', (req, res) => {
       res.status(400).json(err);
     });
 });
+
 
 // update a product
 router.put('/:id', (req, res) => {
